@@ -187,8 +187,6 @@ function diceResults(dice, odds_b) {
 function cardResults(cards, odds_c) {
     let totalPnl = 0
 
-    console.log(cards);
-
     const sum3 = cards[0]%13 + cards[1]%13 + cards[2]%13 + 3;
     const longCardValue = document.getElementById('cardLong').value || 0;
     const shortCardValue = document.getElementById('cardShort').value || 0;
