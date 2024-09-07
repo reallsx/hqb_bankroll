@@ -55,7 +55,7 @@ function coinResults(coins, odds_a) {
     const inputa1Value = document.getElementById('bets-a1').value || 0;
     const inputa1 = parseFloat(inputa1Value);
     totalPnl += (tempPnl - 1) * inputa1;
-    document.getElementById('pnl-a1').innerHTML = (tempPnl - 1) * inputa1;
+    document.getElementById('pnl-a1').innerHTML = round_((tempPnl - 1) * inputa1);
 
     tempPnl = 0
     if ((coins[0] === 1 && coins[1] === 1 && coins[2] === 1) || (coins[0] === 0 && coins[1] === 0 && coins[2] === 0)) {
@@ -64,7 +64,7 @@ function coinResults(coins, odds_a) {
     const inputa2Value = document.getElementById('bets-a2').value || 0;
     const inputa2 = parseFloat(inputa2Value);
     totalPnl += (tempPnl - 1) * inputa2;
-    document.getElementById('pnl-a2').innerHTML = (tempPnl - 1) * inputa2;
+    document.getElementById('pnl-a2').innerHTML = round_((tempPnl - 1) * inputa2);
 
     tempPnl = 0
     if (coins[0]+ coins[1] + coins[2] > 1 ) {
@@ -73,7 +73,7 @@ function coinResults(coins, odds_a) {
     const inputa3Value = document.getElementById('bets-a3').value || 0;
     const inputa3 = parseFloat(inputa3Value);
     totalPnl += (tempPnl - 1) * inputa3;
-    document.getElementById('pnl-a3').innerHTML = (tempPnl - 1) * inputa3;
+    document.getElementById('pnl-a3').innerHTML = round_((tempPnl - 1) * inputa3);
 
     tempPnl = 0
     if (coins[2] === 1){
@@ -82,7 +82,7 @@ function coinResults(coins, odds_a) {
     const inputa4Value = document.getElementById('bets-a4').value || 0;
     const inputa4 = parseFloat(inputa4Value);
     totalPnl += (tempPnl - 1) * inputa4;
-    document.getElementById('pnl-a4').innerHTML = (tempPnl - 1) * inputa4;
+    document.getElementById('pnl-a4').innerHTML = round_((tempPnl - 1) * inputa4);
 
     tempPnl = 0
     if (coins[0] + coins[1] === 0 || coins[2] + coins[1] === 0) {
@@ -91,7 +91,7 @@ function coinResults(coins, odds_a) {
     const inputa5Value = document.getElementById('bets-a5').value || 0;
     const inputa5 = parseFloat(inputa5Value);
     totalPnl += (tempPnl - 1) * inputa5;
-    document.getElementById('pnl-a5').innerHTML = (tempPnl - 1) * inputa5;
+    document.getElementById('pnl-a5').innerHTML = round_((tempPnl - 1) * inputa5);
 
     tempPnl = 0
     if (coins[0] + coins[2] === 1) {
@@ -100,7 +100,7 @@ function coinResults(coins, odds_a) {
     const inputa6Value = document.getElementById('bets-a6').value || 0;
     const inputa6 = parseFloat(inputa6Value);
     totalPnl += (tempPnl - 1) * inputa6;
-    document.getElementById('pnl-a6').innerHTML = (tempPnl - 1) * inputa6;
+    document.getElementById('pnl-a6').innerHTML = round_((tempPnl - 1) * inputa6);
 
     return totalPnl;
 }
@@ -116,7 +116,7 @@ function diceResults(dice, odds_b) {
     const inputb1Value = document.getElementById('bets-b1').value || 0;
     const inputb1 = parseFloat(inputb1Value);
     totalPnl += (tempPnl - 1) * inputb1;
-    document.getElementById('pnl-b1').innerHTML = (tempPnl - 1) * inputb1;
+    document.getElementById('pnl-b1').innerHTML = round_((tempPnl - 1) * inputb1);
 
     tempPnl = 0
     if (sum2 === 4) {
@@ -125,7 +125,7 @@ function diceResults(dice, odds_b) {
     const inputb2Value = document.getElementById('bets-b2').value || 0;
     const inputb2 = parseFloat(inputb2Value);
     totalPnl += (tempPnl - 1) * inputb2;
-    document.getElementById('pnl-b2').innerHTML = (tempPnl - 1) * inputb2;
+    document.getElementById('pnl-b2').innerHTML = round_((tempPnl - 1) * inputb2);
 
     tempPnl = 0
     if (sum2 ===5) {
@@ -134,7 +134,7 @@ function diceResults(dice, odds_b) {
     const inputb3Value = document.getElementById('bets-b3').value || 0;
     const inputb3 = parseFloat(inputb3Value);
     totalPnl += (tempPnl - 1) * inputb3;
-    document.getElementById('pnl-b3').innerHTML = (tempPnl - 1) * inputb3;
+    document.getElementById('pnl-b3').innerHTML = round_((tempPnl - 1) * inputb3);
 
     tempPnl = 0
     if (sum2 > 5 && sum2 < 9) {
@@ -143,7 +143,7 @@ function diceResults(dice, odds_b) {
     const inputb4Value = document.getElementById('bets-b4').value || 0;
     const inputb4 = parseFloat(inputb4Value);
     totalPnl += (tempPnl - 1) * inputb4;
-    document.getElementById('pnl-b4').innerHTML = (tempPnl - 1) * inputb4;
+    document.getElementById('pnl-b4').innerHTML = round_((tempPnl - 1) * inputb4);
 
     tempPnl = 0
     if (sum2 === 9 || sum2 === 10) {
@@ -152,7 +152,7 @@ function diceResults(dice, odds_b) {
     const inputb5Value = document.getElementById('bets-b5').value || 0;
     const inputb5 = parseFloat(inputb5Value);
     totalPnl += (tempPnl - 1) * inputb5;
-    document.getElementById('pnl-b5').innerHTML = (tempPnl - 1) * inputb5;
+    document.getElementById('pnl-b5').innerHTML = round_((tempPnl - 1) * inputb5);
 
     tempPnl = 0
     if (sum2 > 10) {
@@ -161,25 +161,25 @@ function diceResults(dice, odds_b) {
     const inputb6Value = document.getElementById('bets-b6').value || 0;
     const inputb6 = parseFloat(inputb6Value);
     totalPnl += (tempPnl - 1) * inputb6;
-    document.getElementById('pnl-b6').innerHTML = (tempPnl - 1) * inputb6;
+    document.getElementById('pnl-b6').innerHTML = round_((tempPnl - 1) * inputb6);
 
     tempPnl = 0
-    if (sum2 > 7) {
+    if (dice[0] * dice[1] < 20) {
         tempPnl = odds_b[6] + 2
     }
     const inputb7Value = document.getElementById('bets-b7').value || 0;
     const inputb7 = parseFloat(inputb7Value);
     totalPnl += (tempPnl - 1) * inputb7;
-    document.getElementById('pnl-b7').innerHTML = (tempPnl - 1) * inputb7;
+    document.getElementById('pnl-b7').innerHTML = round_((tempPnl - 1) * inputb7);
 
     tempPnl = 0
-    if (dice[0] * dice[1] < 20) {
+    if (sum2 > 7) {
         tempPnl = round_(odds_b[7]) + 2
     }
     const inputb8Value = document.getElementById('bets-b8').value || 0;
     const inputb8 = parseFloat(inputb8Value);
     totalPnl += (tempPnl - 1) * inputb8;
-    document.getElementById('pnl-b8').innerHTML = (tempPnl - 1) * inputb8;
+    document.getElementById('pnl-b8').innerHTML = round_((tempPnl - 1) * inputb8);
 
     return totalPnl;
 }
@@ -206,7 +206,7 @@ function cardResults(cards, odds_c) {
     const inputc1Value = document.getElementById('bets-c1').value || 0;
     const inputc1 = parseFloat(inputc1Value);
     totalPnl += (tempPnl - 1) * inputc1;
-    document.getElementById('pnl-c1').innerHTML = (tempPnl - 1) * inputc1;
+    document.getElementById('pnl-c1').innerHTML = round_((tempPnl - 1) * inputc1);
 
     tempPnl = 0
     if (product2 > 100) {
@@ -215,7 +215,7 @@ function cardResults(cards, odds_c) {
     const inputc2Value = document.getElementById('bets-c2').value || 0;
     const inputc2 = parseFloat(inputc2Value);
     totalPnl += (tempPnl - 1) * inputc2;
-    document.getElementById('pnl-c2').innerHTML = (tempPnl - 1) * inputc2;
+    document.getElementById('pnl-c2').innerHTML = round_((tempPnl - 1) * inputc2);
 
     tempPnl = 0
     if (product2 < 30) {
@@ -224,7 +224,7 @@ function cardResults(cards, odds_c) {
     const inputc3Value = document.getElementById('bets-c3').value || 0;
     const inputc3 = parseFloat(inputc3Value);
     totalPnl += (tempPnl - 1) * inputc3;
-    document.getElementById('pnl-c3').innerHTML = (tempPnl - 1) * inputc3;
+    document.getElementById('pnl-c3').innerHTML = round_((tempPnl - 1) * inputc3);
 
     tempPnl = 0
     if (product2%2 === 0) {
@@ -233,7 +233,7 @@ function cardResults(cards, odds_c) {
     const inputc4Value = document.getElementById('bets-c4').value || 0;
     const inputc4 = parseFloat(inputc4Value);
     totalPnl += (tempPnl - 1) * inputc4;
-    document.getElementById('pnl-c4').innerHTML = (tempPnl - 1) * inputc4;
+    document.getElementById('pnl-c4').innerHTML = round_((tempPnl - 1) * inputc4);
 
     return totalPnl;
 }
@@ -261,7 +261,7 @@ document.getElementById('generateButton').addEventListener('click', resetInputs)
   
 
 const odds_a = [0.25, 0.25, 0.5, 0.5, 0.375, 0.5];
-const odds_b = [1/12, 1/12, 1/9, 4/9, 7/36, 1/12, 5/12, 7/9];
+const odds_b = [1/12, 1/12, 1/9, 4/9, 7/36, 1/12, 7/9, 5/12];
 const odds_c = [0.390, 0.124, 0.408, 0.710];
 
 const multiplier = [0.7, 0.85, 0.9, 0.95, 0.097, 0.097, 1, 1, 1.03, 1.05, 1.1, 1.15, 1.3];
