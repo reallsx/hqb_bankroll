@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Games</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="container">
+    <!-- Results Container -->
+    <div id="result-container">
+      <div class="column">
+        <strong>Coins:</strong>
+        <div id="coins-result"></div>
+      </div>
+      <div class="column">
+        <strong>Dice:</strong>
+        <div id="dice-result"></div>
+      </div>
+      <div class="column">
+        <strong>Cards:</strong>
+        <div id="cards-result"></div>
+      </div>
+    </div>
+
+    <!-- Button to the right of the results -->
+    <button id="generateButton">Play Games</button>
+  </div>
+
+  <!-- Extra columns below -->
+  <div id="extra-columns">
+    <div class="extra-column">
+        Coins
+        <table border="1">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Odds</th>
+                <th>Bets</th>
+                <th>PnL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A1</td>
+                <td>HTH or THT</td>
+                <td><div id="odds-a1" style="display: inline;"></div>:1</td>
+                <td><input id="bets-a1" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+                <td><div id="pnl-a1">0</div></td>
+              </tr>
+              <tr>
+                <td>A2</td>
+                <td>HHH or TTT</td>
+                <td><div id="odds-a2" style="display: inline;"></div>:1</td>
+                <td><input id="bets-a2" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+                <td><div id="pnl-a2">0</div></td>
+              </tr>
+              <tr>
+                <td>A3</td>
+                <td>more H than T</td>
+                <td><div id="odds-a3" style="display: inline;"></div>:1</td>
+                <td><input id="bets-a3" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+                <td><div id="pnl-a3">0</div></td>
+              </tr>
+              <tr>
+                <td>A4</td>
+                <td>2nd is H</td>
+                <td><div id="odds-a4" style="display: inline;"></div>:1</td>
+                <td><input id="bets-a4" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+                <td><div id="pnl-a4">0</div></td>
+              </tr>
+              <tr id="a5" style="display: none;">
+                <td>A5</td>
+                <td>has TT sequence</td>
+                <td><div id="odds-a5" style="display: inline;"></div>:1</td>
+                <td><input id="bets-a5" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+                <td><div id="pnl-a5">0</div></td>
+              </tr>
+              <tr id="a6" style="display: none;">
+                <td>A6</td>
+                <td>1st 3rd different</td>
+                <td><div id="odds-a6" style="display: inline;"></div>:1</td>
+                <td><input id="bets-a6" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+                <td><div id="pnl-a6">0</div></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="extra-column">
+        Dice
+      <table border="1">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Odds</th>
+            <th>Bets</th>
+            <th>PnL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B1</td>
+            <td>2,3</td>
+            <td><div id="odds-b1" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b1" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b1">0</div></td>
+          </tr>
+          <tr>
+            <td>B2</td>
+            <td>4</td>
+            <td><div id="odds-b2" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b2" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b2">0</div></td>
+          </tr>
+          <tr>
+            <td>B3</td>
+            <td>5</td>
+            <td><div id="odds-b3" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b3" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b3">0</div></td>
+          </tr>
+          <tr>
+            <td>B4</td>
+            <td>6,7,8</td>
+            <td><div id="odds-b4" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b4" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b4">0</div></td>
+          </tr>
+          <tr>
+            <td>B5</td>
+            <td>9,10</td>
+            <td><div id="odds-b5" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b5" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b5">0</div></td>
+          </tr>
+          <tr>
+            <td>B6</td>
+            <td>11,12</td>
+            <td><div id="odds-b6" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b6" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b6">0</div></td>
+          </tr>
+          <tr id="b7" style="display: none;">
+            <td>B7</td>
+            <td>>7</td>
+            <td><div id="odds-b7" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b7" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b7">0</div></td>
+          </tr>
+          <tr id="b8" style="display: none;">
+            <td>B8</td>
+            <td>product <20 </td>
+            <td><div id="odds-b8" style="display: inline;"></div>:1</td>
+            <td><input id="bets-b8" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+            <td><div id="pnl-b8">0</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="extra-column">
+        <div>Sum of rank of 3 cards</div>
+        <table border="1">
+            <thead>
+                <tr>
+                <th></th>
+                <th>Sell</th>
+                <th></th>
+                <th>Buy</th>
+                <th>PnL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Market</td>
+                <td><input type="text" id="cardShort" class="input-class2" placeholder="Enter value" style="width: 50px;" /></td>
+                <td><div id="buy-price" style="display: inline;"></div>@<div id="sell-price" style="display: inline;"></div></td>
+                <td><input type="text" id="cardLong" class="input-class2" placeholder="Enter value" style="width: 50px;" /></td>
+                <td><div id="pnl-mm">0</div></td>
+                </tr>
+            </tbody>
+        </table><br>
+
+
+        <div>Product of rank of first 2 cards</div>
+        <table border="1">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>Odds</th>
+              <th>Bets</th>
+              <th>PnL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>C1</td>
+              <td>>50</td>
+              <td><div id="odds-c1" style="display: inline;"></div>:1</td>
+              <td><input id="bets-c1" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+              <td><div id="pnl-c1">0</div></td>
+            </tr>
+            <tr>
+              <td>C2</td>
+              <td>>100</td>
+              <td><div id="odds-c2" style="display: inline;"></div>:1</td>
+              <td><input id="bets-c2" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+              <td><div id="pnl-c2">0</div></td>
+            </tr>
+            <tr id="c3" style="display: none;">
+              <td>C3</td>
+              <td><30</td>
+              <td><div id="odds-c3" style="display: inline;"></div>:1</td>
+              <td><input id="bets-c3" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+              <td><div id="pnl-c3">0</div></td>
+            </tr>
+            <tr id="c4" style="display: none;">
+              <td>C4</td>
+              <td>is even</td>
+              <td><div id="odds-c4" style="display: inline;"></div>:1</td>
+              <td><input id="bets-c4" type="text" class="input-class" placeholder="0" style="width: 50px;" /></td>
+              <td><div id="pnl-c4">0</div></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+  <div id="bottom-column">
+    <div class="bottom-column">
+      <div style="display: inline-block; font-weight: bold;">Balance:</div>
+      <div id="result-value" style="display: inline-block; margin-left: 10px;">1000</div>
+      <div style="display: inline-block; font-weight: bold; margin-left: 100px;">Total PnL:</div>
+      <div id="total-pnl-value" style="display: inline-block; margin-left: 10px;">0</div>
+      <!-- <div id="total-pnl-value" style="margin-left: 10px; text-align: right; flex: 1; display: inline-block; justify-content: flex-end;">2000</div> -->
+    </div>
+  </div>
+
+  <!-- Import the randomGames.js script -->
+  <script src="randomGames.js"></script>
+  <script src="display.js"></script>
+  <script src="updateResult.js"></script>
+
+</body>
+</html>

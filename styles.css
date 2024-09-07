@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  #result-container {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+  }
+  
+  .column {
+    margin-right: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #extra-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .extra-column {
+    width: 30%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between rows */
+  }
+  
+  .extra-column input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
+  #bottom-column {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .bottom-column {
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .input-class {
+    width: 10px; /* Adjust the width as needed */
+  }
+  
+
+
+  th, td{
+    border-style: none;
+  }
