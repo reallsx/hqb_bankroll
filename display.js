@@ -94,7 +94,7 @@ function coinResults(coins, odds_a) {
     document.getElementById('pnl-a5').innerHTML = (tempPnl - 1) * inputa5;
 
     tempPnl = 0
-    if (coins[0] + coins[3] === 1) {
+    if (coins[0] + coins[2] === 1) {
         tempPnl = odds_a[5] + 2
     }
     const inputa6Value = document.getElementById('bets-a6').value || 0;
